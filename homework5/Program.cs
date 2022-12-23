@@ -75,7 +75,7 @@ void PrintArray(int[] array)
 [3 7 22 2 78] -> 76
 */
 
-int size = 4;
+/* int size = 4;
 int[] numbers = new int[size];
 CreateRandomArray(numbers);
 PrintArray(numbers);
@@ -114,4 +114,31 @@ void PrintArray(int[] array)
     Console.WriteLine();
 }
 
- 
+  */
+
+  for (int i = 0; i < numbers.Length; i++)
+{
+if (numbers[i] % 2 == 0)
+count++;
+} // в метод и вернуть из метода count
+
+int sumEvenNumbersIndex = 0;
+for (int i = 1; i < numbers.Length; i += 2)
+{
+sumEvenNumbersIndex += numbers[i];
+} // в метод и вернуть sumEvenNumbersIndex
+
+int max = numbers[0];
+int min = numbers[0];
+
+for (int i = 0; i < numbers.Length; i++)
+{
+if (numbers[i] > max)
+{
+max = numbers[i];
+}
+else if (numbers[i] < min)
+{
+min = numbers[i];
+}
+} // в метод и вернуть одномерный массив из двух элементов.
